@@ -11,6 +11,6 @@ Current theme: [Nord](https://www.nordtheme.com/)
 - PDF reader: [zathura](https://github.com/pwmt/zathura) (~/.config/zathura/zathurarc)
 - Screen lock: [script](i3lock_run.sh) using [i3lock](https://github.com/i3/i3lock)
 
-## Palettes
-
-todo
+![](screenshots/overview-1.png)
+![](screenshots/overview-rofi.png)
+![](screenshots/zathura-and-alacritty.png)
