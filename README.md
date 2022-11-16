@@ -15,7 +15,7 @@ Current theme: [Nord](https://www.nordtheme.com/)
 ![](screenshots/overview-rofi.png)
 ![](screenshots/zathura-and-alacritty.png)
 
-## Configuration
+## :rice_ball: Configuration
 
 ### DWM
 
