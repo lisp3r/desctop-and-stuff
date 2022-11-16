@@ -2,7 +2,7 @@
 
 Current theme: [Nord](https://www.nordtheme.com/)
 
-## Desktop
+## :ice_cube: Desktop
 
 - Desktop manager: DWM with patches (see [`dwm-flexipatch`](https://github.com/bakkeby/dwm-flexipatch)).
 - Status bar: [`dwmblocks-async`](https://github.com/UtkarshVerma/dwmblocks-async). Blocks are clickable. This requires [`extra/libnotify`](https://man.archlinux.org/man/notify-send.1.en) package and a few patches enabled in the `dwm-flexipatch` config.
