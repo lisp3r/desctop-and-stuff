@@ -1,0 +1,7 @@
+#!/bin/sh
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# . $SCRIPT_DIR/sb-theme
+# echo " $(date '+%I:%M %p')"
+echo " $(date '+%a %b %d | %T')"

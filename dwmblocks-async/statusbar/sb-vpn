@@ -1,0 +1,39 @@
+#!/bin/sh
+
+vpn_icon='嬨'
+
+tun_connection=$(nmcli connection show | grep -v -e "--" | grep tun | awk '{ print $1 }')
+tap_connection=$(nmcli connection show | grep -v -e "--" | grep tap | awk '{ print $1 }')
+
+notify_status=''
+
+if [ ! -z $tap_connection ]; then
+	ip4_addr=$(nmcli connection show $tap_connection | grep IP4.ADDRESS | awk '{ print $2 }')
+	status=$vpn_icon
+	notify_status+=$vpn_icon
+	notify_status+=' '
+	notify_status+=$tap_connection
+	notify_status+='    '
+	notify_status+=$ip4_addr
+	notify_status+='\n'
+fi
+
+if [ ! -z $tun_connection ]; then
+	if [ ! -z $tun_connection ]; then
+		ip4_addr=$(nmcli connection show $tun_connection | grep IP4.ADDRESS | awk '{ print $2 }')
+		notify_status+=$vpn_icon
+		notify_status+=' '
+		notify_status+=$tun_connection
+		notify_status+='    '
+		notify_status+=$ip4_addr
+		notify_status+='\n'
+	fi
+fi
+
+if [ ! -z "$notify_status" ]; then
+	case $BLOCK_BUTTON in
+	    1) notify-send "Active connections" "$notify_status" ;;
+    esac
+
+	echo "$vpn_icon"
+fi

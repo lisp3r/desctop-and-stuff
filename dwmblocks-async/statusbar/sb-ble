@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#~ ❯ bluetoothctl -- connect F8:8F:07:36:B1:1B
+#~ ❯ bluetoothctl -- disconnect F8:8F:07:36:B1:1B
+connected_devices=$(bluetoothctl -- devices Connected)
+
+ble_icon=""
+
+if [ ! -z "$connected_devices" ]; then
+    case $BLOCK_BUTTON in
+	    1) notify-send "$connected_devices" ;;
+    esac
+
+	echo "$ble_icon"
+fi

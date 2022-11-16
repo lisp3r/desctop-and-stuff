@@ -1,0 +1,14 @@
+#!/bin/sh
+
+icon='聆'
+
+pidof /usr/lib/slack/slack > /dev/null
+if [ $? -eq 0 ]; then
+
+    case $BLOCK_BUTTON in
+	    1) slack > /dev/null ;;
+        3) notify-send "Slack" "Slack is active" ;;
+    esac
+
+    echo "$icon"
+fi

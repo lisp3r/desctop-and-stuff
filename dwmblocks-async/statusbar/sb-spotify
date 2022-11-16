@@ -1,0 +1,14 @@
+#!/bin/sh
+
+icon='阮'
+
+pidof /opt/spotify/spotify > /dev/null
+if [ $? -eq 0 ]; then
+
+    case $BLOCK_BUTTON in
+	    1) spotify > /dev/null ;;
+        3) notify-send "Spotify" "///" ;;
+    esac
+
+    echo "$icon"
+fi

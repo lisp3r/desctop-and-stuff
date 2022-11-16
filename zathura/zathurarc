@@ -1,0 +1,76 @@
+# GENERAL SETTINGS
+# ----------------
+set window-title-basename true
+set statusbar-home-tilde  true
+set recolor               true
+set selection-clipboard   clipboard
+
+# LAYOUT SETTINGS
+# ---------------
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+# set show-scrollbars     false
+
+@REM # NORD THEME DARK
+@REM # ----------
+@REM set default-bg              "#2e3440" # nord0
+@REM set default-fg              "#d8dee9" # nord4
+@REM set statusbar-bg            "#2e3440" # nord0
+@REM set statusbar-fg            "#d8dee9" # nord4
+@REM set inputbar-bg             "#2e3440" # nord0
+@REM set inputbar-fg             "#a3be8c" # nord14
+@REM set completion-bg           "#2e3440" # nord0
+@REM set completion-fg           "#d8dee9" # nord4
+@REM set completion-group-bg     "#2e3440" # nord0
+@REM set completion-group-fg     "#d8dee9" # nord4
+@REM set completion-highlight-bg "#434c5e" # nord2
+@REM set completion-highlight-fg "#d8dee9" # nord4
+@REM set notification-bg         "#3b4252" # nord2
+@REM set notification-fg         "#eceff4" # nord6
+@REM set notification-error-bg   "#bf616a" # nord11
+@REM set notification-error-fg   "#eceff4" # nord6
+@REM set notification-warning-bg "#ebcb8b" # nord13
+@REM set notification-warning-fg "#2e3440" # nord0
+@REM set highlight-color         "#5e81ac" # nord10
+@REM set highlight-active-color  "#88c0d0" # nord8
+@REM set index-bg                "#2e3440" # nord0
+@REM set index-fg                "#d8dee9" # nord4
+@REM set index-active-bg         "#434c5e" # nord2
+@REM set index-active-fg         "#d8dee9" # nord4
+@REM set recolor-darkcolor       "#d8dee9" # nord4
+@REM set recolor-lightcolor      "#2e3440" # nord0
+@REM set render-loading-bg       "#2e3440" # nord0
+@REM set render-loading-fg       "#d8dee9" # nord4
+
+
+
+# NORD THEME LiGHT
+# ----------
+set default-bg              "#d8dee9" # nord4
+set default-fg              "#2e3440" # nord0
+set statusbar-bg            "#d8dee9" # nord4
+set statusbar-fg            "#2e3440" # nord0
+set inputbar-bg             "#d8dee9" # nord4
+set inputbar-fg             "#2e3440" # nord0
+set completion-bg           "#d8dee9" # nord4
+set completion-fg           "#2e3440" # nord0
+set completion-group-bg     "#d8dee9" # nord4
+set completion-group-fg     "#2e3440" # nord0
+set completion-highlight-bg "#eceff4" # nord6
+set completion-highlight-fg "#2e3440" # nord0
+set notification-bg         "#eceff4" # nord6
+set notification-fg         "#3B4252" # nord2
+set notification-error-bg   "#bf616a" # nord11
+set notification-error-fg   "#3B4252" # nord2
+set notification-warning-bg "#ebcb8b" # nord13
+set notification-warning-fg "#d8dee9" # nord4
+set highlight-color         "#5e81ac" # nord10
+set highlight-active-color  "#88c0d0" # nord8
+set index-bg                "#d8dee9" # nord4
+set index-fg                "#2e3440" # nord0
+set index-active-bg         "#eceff4" # nord6
+set index-active-fg         "#2e3440" # nord0
+set recolor-darkcolor       "#2e3440" # nord0
+set recolor-lightcolor      "#d8dee9" # nord4
+set render-loading-bg       "#d8dee9" # nord4
+set render-loading-fg       "#2e3440" # nord0

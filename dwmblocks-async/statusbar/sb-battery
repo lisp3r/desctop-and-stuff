@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Prints all batteries, their percentage remaining and an emoji corresponding
+# to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
+
+notify() {
+	notify-send -h string:x-canonical-private-synchronous:battery "Battery status" "$1"
+}
+
+BATT_DIR=/sys/class/power_supply/BAT0
+
+capacity="$(cat $BATT_DIR/capacity 2>&1)"
+status="$(cat $BATT_DIR/status 2>&1)"
+
+if [ "$capacity" -gt 90 ]; then
+	icon=""
+elif [ "$capacity" -gt 70 ]; then
+	icon=""
+elif [ "$capacity" -gt 50 ]; then
+	icon=""
+elif [ "$capacity" -gt 30 ]; then
+	icon=""
+elif [ "$capacity" -gt 10 ]; then
+	icon=""
+else
+	icon=""
+fi
+
+case $BLOCK_BUTTON in
+	1) notify "$icon $status" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+echo "$icon $capacity%"
+

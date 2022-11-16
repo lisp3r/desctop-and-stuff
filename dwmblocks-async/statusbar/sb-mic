@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if pactl get-source-mute @DEFAULT_SOURCE@ | grep -q yes; then
+    # . sb-theme
+    # display ""
+    echo ""
+fi

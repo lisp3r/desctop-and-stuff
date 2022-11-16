@@ -1,0 +1,6 @@
+configuration {
+  modes: [ combi ];
+  combi-modes: [ run, ssh];
+}
+
+@theme "nord-dark.rasi"

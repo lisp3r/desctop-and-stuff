@@ -1,0 +1,43 @@
+#!/bin/sh
+
+wifi_icon='直'
+ethernet_icon=''
+
+wifi_connection=$(nmcli connection show | grep -v -e "--" | grep wifi | awk '{ print $1 }')
+ethernet_connection=$(nmcli connection show | grep -v -e "--" | grep ethernet | awk '{ print $1 }')
+
+status=''
+notify_status=''
+
+if [ ! -z $wifi_connection ]; then
+	ip4_addr=$(nmcli connection show $wifi_connection | grep IP4.ADDRESS | awk '{ print $2 }')
+	status+=$wifi_icon
+	notify_status+=$wifi_icon
+	notify_status+=' '
+	notify_status+=$wifi_connection
+	notify_status+='    '
+	notify_status+=$ip4_addr
+	notify_status+='\n'
+fi
+
+if [ ! -z $ethernet_connection ]; then
+	if [ ! -z "$status" ]; then
+		status+=' '
+	fi
+	ip4_addr=$(nmcli connection show $ethernet_connection | grep IP4.ADDRESS | awk '{ print $2 }')
+	status+=$ethernet_icon
+	notify_status+=$ethernet_icon
+	notify_status+=' '
+	notify_status+=$ethernet_connection
+	notify_status+='    '
+	notify_status+=$ip4_addr
+	notify_status+='\n'
+fi
+
+if [ ! -z "$status" ]; then
+	case $BLOCK_BUTTON in
+	    1) notify-send "Active connections" "$notify_status" ;;
+    esac
+
+	echo "$status"
+fi
