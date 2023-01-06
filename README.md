@@ -58,3 +58,22 @@ location: `~/.config/rofi/`
 ### zathura
 
 location: `~/.config/zathura/zathurarc`
+
+## System settings
+
+Environment vars for gui Java applications:
+
+```sh
+_JAVA_AWT_WM_NONREPARENTING=1
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+AWT_TOOLKIT=MToolkit
+```
+see [`etc/environment`]()  # todo
+
+I run it all on ThinkPad E14 so I use `TLP` for power management. Some `tlp.conf` settings:
+
+```sh
+# Do not suspend USB devices
+USB_AUTOSUSPEND=0
+```
+See: [`etc/tlp.conf`]()  # todo
