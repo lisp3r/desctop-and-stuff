@@ -55,6 +55,8 @@ location: `~/.config/alacritty/`
 
 location: `~/.config/rofi/`
 
+![](screenshots/overview-rofi-1.png)
+
 ### zathura
 
 location: `~/.config/zathura/zathurarc`
